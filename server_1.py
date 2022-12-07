@@ -2,7 +2,7 @@ import socket
 import threading
 
 HOST = socket.gethostbyname('localhost')
-PORT = 9090
+PORT = 9999
 clients = []
 
 
@@ -23,8 +23,8 @@ def appServer():
         client, addr = server.accept()
         clients.append(client)
         print(client, addr)
-        
-        #Necessária pois precisamos receber outros clients
+
+        # Necessária pois precisamos receber outros clients
         th_broadcast = threading.Thread(target=tratandoMsg, args=[client])
         th_broadcast.start()
 

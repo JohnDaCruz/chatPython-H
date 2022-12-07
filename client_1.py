@@ -2,7 +2,7 @@ import socket
 import threading
 
 HOST = socket.gethostbyname('localhost')  # !!
-PORT = 9090
+PORT = 9999
 
 
 
